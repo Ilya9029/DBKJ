@@ -35,7 +35,9 @@ public class DBManager {
 		db.execSQL("INSERT INTO RESULTS VALUES ('" + username + "', " + score
 				+ ");");
 	}
-
+	// player one 150
+	// запрос
+	// INSERT INTO RESULTS VALUES('player one', 150);
 
 
 	ArrayList<Result> getAllResults() {
@@ -58,10 +60,4 @@ public class DBManager {
 	private void createTablesIfNeedBe() {
 		db.execSQL("CREATE TABLE IF NOT EXISTS RESULTS (USERNAME TEXT, SCORE INTEGER);");
 	}
-
-	private boolean dbExist() {
-		File dbFile = context.getDatabasePath(DB_NAME);
-		return dbFile.exists();
-	}
-
 }
